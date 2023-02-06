@@ -2,8 +2,8 @@
 </script>
 
 <template>
-  <div text="text-red text-xl" font-sans>hello world</div>
-  <div i-carbon-bee></div>
+  <ActionBar />
+  <TimeScheduler />
 </template>
 
 <style>
