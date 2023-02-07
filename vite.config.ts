@@ -1,33 +1,39 @@
-import { fileURLToPath, URL } from 'node:url'
-
 import { defineConfig } from 'vite'
-import vue from '@vitejs/plugin-vue'
+import Vue from '@vitejs/plugin-vue'
 import Components from 'unplugin-vue-components/vite'
 import AutoImport from 'unplugin-auto-import/vite'
 import UnoCSS from 'unocss/vite'
-import { presetUno, presetAttributify, presetIcons } from 'unocss'
+import { presetAttributify, presetIcons, presetUno } from 'unocss'
 
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [
-    vue(),
+    Vue({
+      reactivityTransform: true,
+    }),
     Components(),
     AutoImport({
       imports: [
-        'vue'
+        'vue',
+        'vue/macros',
+        '@vueuse/core',
       ],
       dirs: [
-        './src/composoables'
+        './src/composoables',
       ],
-      vueTemplate: true
+      vueTemplate: true,
     }),
     UnoCSS({
+      shortcuts: {
+        'border-base': 'border-gray/20 dark:border-gray/15',
+        'bg-base': 'bg-white dark:bg-truegray-900',
+        'bg-canvas': 'bg-gray:15 dark:bg-truegray-800',
+      },
       presets: [
         presetUno(),
         presetAttributify(),
-        presetIcons()
-      ]
-    })
+        presetIcons(),
+      ],
+    }),
   ],
-  
 })

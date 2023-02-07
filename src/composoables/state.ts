@@ -1,6 +1,6 @@
 import { Timezone } from '../types';
 
-export const zones = ref<Timezone[]>([])
+export const zones = $ref<Timezone[]>([])
 export function addToTimezone(timezone: Timezone) {
-  zones.value.push(timezone)
+  zones.push(timezone)
 }

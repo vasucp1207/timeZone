@@ -1,6 +1,6 @@
 import timezoneRow from 'timezones.json'
 
-export const timezone = timezoneRow.flatMap(i => {
+export const timezones = timezoneRow.flatMap(i => {
     return i.utc.map(u => {
       return {
         name: u,
