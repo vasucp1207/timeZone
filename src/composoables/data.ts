@@ -5,7 +5,8 @@ export const timezones = timezoneRow.flatMap(i => {
       return {
         name: u,
         offset: i.offset,
-        isdst: i.isdst
+        isdst: i.isdst,
+        abbr: i.abbr,
       }
     })
   })

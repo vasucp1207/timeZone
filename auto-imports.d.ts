@@ -49,7 +49,9 @@ declare global {
   const logicOr: typeof import('@vueuse/core')['logicOr']
   const makeDestructurable: typeof import('@vueuse/core')['makeDestructurable']
   const markRaw: typeof import('vue')['markRaw']
+  const moveZone: typeof import('./src/composoables/state')['moveZone']
   const nextTick: typeof import('vue')['nextTick']
+  const now: typeof import('./src/composoables/state')['now']
   const onActivated: typeof import('vue')['onActivated']
   const onBeforeMount: typeof import('vue')['onBeforeMount']
   const onBeforeUnmount: typeof import('vue')['onBeforeUnmount']
@@ -82,6 +84,7 @@ declare global {
   const refDefault: typeof import('@vueuse/core')['refDefault']
   const refThrottled: typeof import('@vueuse/core')['refThrottled']
   const refWithControl: typeof import('@vueuse/core')['refWithControl']
+  const removeZone: typeof import('./src/composoables/state')['removeZone']
   const resolveComponent: typeof import('vue')['resolveComponent']
   const resolveRef: typeof import('@vueuse/core')['resolveRef']
   const resolveUnref: typeof import('@vueuse/core')['resolveUnref']
@@ -254,6 +257,7 @@ declare global {
   const watchTriggerable: typeof import('@vueuse/core')['watchTriggerable']
   const watchWithFilter: typeof import('@vueuse/core')['watchWithFilter']
   const whenever: typeof import('@vueuse/core')['whenever']
+  const zoneNames: typeof import('./src/composoables/state')['zoneNames']
   const zones: typeof import('./src/composoables/state')['zones']
 }
 // for vue template auto import
@@ -307,7 +311,9 @@ declare module 'vue' {
     logicOr: typeof import('@vueuse/core')['logicOr']
     makeDestructurable: typeof import('@vueuse/core')['makeDestructurable']
     markRaw: typeof import('vue')['markRaw']
+    moveZone: typeof import('./src/composoables/state')['moveZone']
     nextTick: typeof import('vue')['nextTick']
+    now: typeof import('./src/composoables/state')['now']
     onActivated: typeof import('vue')['onActivated']
     onBeforeMount: typeof import('vue')['onBeforeMount']
     onBeforeUnmount: typeof import('vue')['onBeforeUnmount']
@@ -340,6 +346,7 @@ declare module 'vue' {
     refDefault: typeof import('@vueuse/core')['refDefault']
     refThrottled: typeof import('@vueuse/core')['refThrottled']
     refWithControl: typeof import('@vueuse/core')['refWithControl']
+    removeZone: typeof import('./src/composoables/state')['removeZone']
     resolveComponent: typeof import('vue')['resolveComponent']
     resolveRef: typeof import('@vueuse/core')['resolveRef']
     resolveUnref: typeof import('@vueuse/core')['resolveUnref']
@@ -512,6 +519,7 @@ declare module 'vue' {
     watchTriggerable: typeof import('@vueuse/core')['watchTriggerable']
     watchWithFilter: typeof import('@vueuse/core')['watchWithFilter']
     whenever: typeof import('@vueuse/core')['whenever']
+    zoneNames: typeof import('./src/composoables/state')['zoneNames']
     zones: typeof import('./src/composoables/state')['zones']
   }
 }

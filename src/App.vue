@@ -4,9 +4,9 @@
 <template>
   <div font-sans bg-canvas h-screen>
     <Navbar />
-    <div border="~ base rounded" bg-base shadow m2>
+    <div border="~ base rounded" bg-base shadow mx8>
       <ActionBar />
-      <TimeSchedular />
+      <TimeScheduler />
     </div>
   </div>
 </template>
